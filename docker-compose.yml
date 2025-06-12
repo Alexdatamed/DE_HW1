@@ -1,0 +1,43 @@
+services:
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: advertising
+      MYSQL_USER: analytics_user
+      MYSQL_PASSWORD: analytics_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "analytics_user", "-panalytics_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  etl_env:
+    image: python:3.11-slim
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+      - PIP_ROOT_USER_ACTION=ignore  # Вирішує попередження pip
+    volumes:
+      - .:/app
+      - pip_cache:/usr/local/lib/python3.11/site-packages
+    working_dir: /app
+    depends_on:
+      mysql:
+        condition: service_healthy
+    command: |
+      bash -c "
+      apt-get update && apt-get install -y gcc default-libmysqlclient-dev pkg-config &&
+      pip install --upgrade pip &&
+      pip install -r requirements.txt &&
+      python etl_transform.py
+      "
+    profiles: ["etl"]
+
+volumes:
+  pip_cache:
