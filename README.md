@@ -130,11 +130,11 @@ bash scripts/check_tables.sh
 
 ![ETL та його діагностика](results/photo_2025-06-12_22-33-18.jpg)
 ![ETL та його діагностика](results/photo_2025-06-12_22-33-36.jpg)
-![ETL та його діагностика](results/photo_2025-06-12_22-35-05.jpg)
-![ETL та його діагностика](results/photo_2025-06-12_22-34-54.jpg)
-![ETL та його діагностика](results/photo_2025-06-12_22-34-39.jpg)
-![](results/photo_2025-06-12_22-34-32.jpg)
-![ad_events](results/photo_2025-06-12_22-34-24.jpg)
+![Перевірка таблиць](results/photo_2025-06-12_22-35-05.jpg)
+![Перевірка таблиць](results/photo_2025-06-12_22-34-54.jpg)
+![Перевірка таблиць](results/photo_2025-06-12_22-34-39.jpg)
+![Перевірка таблиць](results/photo_2025-06-12_22-34-32.jpg)
+![Перевірка таблиць](results/photo_2025-06-12_22-34-24.jpg)
 
 ---
 
