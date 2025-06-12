@@ -134,7 +134,7 @@ bash scripts/check_tables.sh
 
 ## 🔗 Посилання
 
-> 📁 [GitHub репозиторій (публічний)](https://github.com/Alexdatamed/DE_HW1)
+> 📁 [GitHub репозиторій (приватний)](https://github.com/Alexdatamed/DE_HW1)
 
 ---
 
