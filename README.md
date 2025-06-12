@@ -101,8 +101,8 @@ SELECT * FROM campaigns LIMIT 10;
 1. 🔁 **Склонуйте репозиторій:**
 
 ```bash
-git clone https://github.com/yourusername/DE_HW1_ETL.git
-cd DE_HW1_ETL
+git clone https://github.com/Alexdatamed/DE_HW1.git
+cd DE_HW1
 ```
 
 2. 🐳 **Запустіть повний ETL-процес із Docker:**
