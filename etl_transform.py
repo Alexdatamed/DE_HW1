@@ -163,8 +163,9 @@ def etl_1000_events_fixed():
                 matched_events += 1
 
                 # Якщо був клік
-                if (row.get('WasClicked', False) == True and
-                        not pd.isna(row.get('ClickTimestamp'))):
+                clicked = str(row.get('WasClicked', '')).strip().lower() == 'true'
+                # Якщо був клік
+                if clicked and not pd.isna(row.get('ClickTimestamp')):
                     clicks_rows.append((
                         row['EventID'],
                         row['ClickTimestamp'],
