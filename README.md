@@ -128,7 +128,7 @@ bash scripts/check_tables.sh
 
 ## 📷 Скріни
 
-![Таблиці](screenshots/table_previews.png)
+![ETL та його діагностика](results/photo_2025-06-12_22-33-18.jpg)
 
 ---
 
